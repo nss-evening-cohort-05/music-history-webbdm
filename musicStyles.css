@@ -60,8 +60,6 @@
 }
 
 .main ul li {
-    display: inline-block;
-    list-style-type: none;
     font-size: 13px;
 }
 
