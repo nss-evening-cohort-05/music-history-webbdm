@@ -76,3 +76,12 @@ form {
 input[type='range'] {
     width: 150px;
 }
+
+.filter {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 30px 0px 0px 30px;
+    height: 30px;
+    width: 50px;
+
+}
