@@ -81,8 +81,6 @@ console.log(songs);
 //
 // }
 
-for (var i = 0; i < songs.length; i++) {
-
-    $("#songs").html(`<li>${songs[i].name} by ${songs[i].artist} from the album ${songs[i].album}</li> <button>DELETE</button>`);
-
-}
+songs.map(function(song){
+    $("#songs").append(`<li>${song.name} by ${song.artist} from the album ${song.album}</li> <button class="btn">DELETE</button>`);
+});
