@@ -1,17 +1,15 @@
 // $(document).ready(function() {
 //     $.ajax({
-//         url: "songs.json",
-//         data: {
-//             format: 'json'
-//         },
-//         succes: function() {
+//         url: "../songs.json",
+//         success: function() {
 //             console.log("Songs.json has been loaded");
 //         },
 //         error: function() {
 //             console.log("Songs.json failed to load");
 //         },
 //         dataType: 'json',
-//         type: "GET"
+//         type: "GET",
+//         async: false
 //     });
 // });
 
@@ -67,8 +65,6 @@ var songs = [
 // songs.unshift(newSong1);
 // songs.push(newSong2);
 
-console.log(songs);
-
 // for (i = 0; i < songs.length; i++) {
 //
 //     songs[i] = songs[i].replace(/>/g, '-');
@@ -82,5 +78,9 @@ console.log(songs);
 // }
 
 songs.map(function(song){
-    $("#songs").append(`<li>${song.name} by ${song.artist} from the album ${song.album}</li> <button class="btn">DELETE</button>`);
+    $("#songs").append(`<li>${song.name} by ${song.artist} from the album ${song.album} <button class="delete">DELETE</button></li>`);
+});
+
+$(".delete").click(function() {
+  $(this).parent().remove();
 });
