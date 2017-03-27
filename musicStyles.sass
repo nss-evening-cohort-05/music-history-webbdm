@@ -30,32 +30,37 @@ $labelfont: 'Russo One', sans-serif
     background-color: $background
     flex: 0 1 30%
     margin-right: 14px
-
-.main
-    background-color: $background
-    flex: 0 2 68%
+    font-family: $labelfont
 
 .side, .main
     height: 350px
 
-.nav ul
+.nav
+  ul
     text-align: left
     margin: 25px 0px 0px 0px
 
-.nav ul li
+  li
     display: inline-block
     list-style-type: none
     text-align: left
     font-size: 13px
     font-family: $labelfont
 
-.main ul li
-    font-size: 13px
+.main
+    background-color: $background
+    flex: 0 2 68%
 
-.main ul, h3
+.main
+  li
+    font-size: 13px
+    list-style-type: none
+    margin: 7px 0px
+
+  ul, h3
     text-align: left
 
-.delete
+.delete, .main button
      background-color: #355EB4
      border-radius: 5px
      border: 0px solid

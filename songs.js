@@ -1,17 +1,17 @@
-// $(document).ready(function() {
-//     $.ajax({
-//         url: "../songs.json",
-//         success: function() {
-//             console.log("Songs.json has been loaded");
-//         },
-//         error: function() {
-//             console.log("Songs.json failed to load");
-//         },
-//         dataType: 'json',
-//         type: "GET",
-//         async: false
-//     });
-// });
+$(document).ready(function() {
+    $.ajax({
+        url: "../songs.json",
+        success: function() {
+            console.log("Songs.json has been loaded");
+        },
+        error: function() {
+            console.log("Songs.json failed to load");
+        },
+        dataType: 'json',
+        type: "GET",
+        async: false
+    });
+});
 
 var songs = [
     {
@@ -49,38 +49,10 @@ var songs = [
     }
 ];
 
-// var songs = [];
-//
-// songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-// songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-// songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-// songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-// songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
-//
-// console.log(songs.length);
-//
-// var newSong1 = "Hotel California > by the Eagles";
-// var newSong2 = "Thriller > by Michael Jackson";
-//
-// songs.unshift(newSong1);
-// songs.push(newSong2);
-
-// for (i = 0; i < songs.length; i++) {
-//
-//     songs[i] = songs[i].replace(/>/g, '-');
-//     songs[i] = songs[i].replace(/\*/g, "");
-//     songs[i] = songs[i].replace(/@/g, '-');
-//     songs[i] = songs[i].replace(/\(/g, '');
-//     songs[i] = songs[i].replace(/!/g, '');
-//
-//     // songs[i] = songs[i].replace(/[\W_]+/g," ");
-//
-// }
-
-songs.map(function(song){
+songs.map(function(song) {
     $("#songs").append(`<li>${song.name} by ${song.artist} from the album ${song.album} <button class="delete">DELETE</button></li>`);
 });
 
 $(".delete").click(function() {
-  $(this).parent().remove();
+    $(this).parent().remove();
 });
