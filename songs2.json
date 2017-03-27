@@ -1,0 +1,23 @@
+{
+    "songs": [{
+            "name": "Song 2",
+            "artist": "Blur",
+            "album": "Blur"
+        },
+        {
+            "name": "Ironic",
+            "artist": "Alanis Morisette",
+            "album": "Jagged Little Pill"
+        },
+        {
+            "name": "Legs",
+            "artist": "ZZ Top",
+            "album": "Eliminator"
+        },
+        {
+            "name": "Smells Like Teen Spirit",
+            "artist": "Nirvana",
+            "album": "Nevermind"
+        }
+    ]
+}

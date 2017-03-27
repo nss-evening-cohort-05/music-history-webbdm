@@ -1,72 +1,74 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
 
-  <title>Music History</title>
-  <meta name="description" content="Music History">
-  <meta name="author" content="SitePoint">
-  <link rel="stylesheet" href="songstyles.min.css">
+<head>
+    <meta charset="utf-8">
+
+    <title>Music History</title>
+    <meta name="description" content="Music History">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="musicStyles.min.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="flex">
+    <div class="container">
+        <div class="flex">
 
-        <div class="nav">
-          <ul>
-            <li>View Music |</li>
-            <li>Add Music |</li>
-            <li>Profile</li>
-          </ul>
-        </div>
+            <div class="nav">
+                <ul>
+                    <li>View Music |</li>
+                    <li>Add Music |</li>
+                    <li>Profile</li>
+                </ul>
+            </div>
 
-        <div class="side">
+            <div class="side">
 
-          <form>
-              <label for="length">Song Length</label>
-              <br>
-              <input type="range" name="length">
-              <br>
+                <form>
+                    <label for="length">Song Length</label>
+                    <br>
+                    <input type="range" name="length">
+                    <br>
 
-              <label for="artist">Artist</label><br>
-                <select name="artist">
+                    <label for="artist">Artist</label><br>
+                    <select name="artist">
                   <option></option>
                 </select><br>
-              <br>
+                    <br>
 
-              <label for="album">Album</label><br>
-                <select name="album">
+                    <label for="album">Album</label><br>
+                    <select name="album">
                   <option></option>
                 </select><br><br>
 
-              <label>Genre</label><br><br>
-                <label><input type="checkbox" name="Rock" value="">Rock </label>
-                <label><input type="checkbox" name="Pop" value="">Pop</label><br>
-                <label><input type="checkbox" name="Blues" value="">Blues</label>
-                <label><input type="checkbox" name="Classical" value="">Classical</label><br>
-                <label><input type="checkbox" name="Jazz" value="">Jazz</label>
-                <label><input type="checkbox" name="Hip Hop" value="">Hip Hop</label><br>
+                    <label>Genre</label><br><br>
+                    <label><input type="checkbox" name="Rock" value="">Rock </label>
+                    <label><input type="checkbox" name="Pop" value="">Pop</label><br>
+                    <label><input type="checkbox" name="Blues" value="">Blues</label>
+                    <label><input type="checkbox" name="Classical" value="">Classical</label><br>
+                    <label><input type="checkbox" name="Jazz" value="">Jazz</label>
+                    <label><input type="checkbox" name="Hip Hop" value="">Hip Hop</label><br>
 
-                <button class="filter">Filter</button>
+                    <button class="filter">Filter</button>
 
-          </form>
+                </form>
+
+            </div>
+
+            <div class="main">
+
+                <ul id="songs"></ul>
+
+            </div>
 
         </div>
-
-        <div class="main">
-
-          <ul id="songs"></ul>
-
-        </div>
-
     </div>
-  </div>
-</div>
+    </div>
 
 
 
-  <script src="songs.js"></script>
+    <script src="songs.js"></script>
 </body>
+
 </html>
