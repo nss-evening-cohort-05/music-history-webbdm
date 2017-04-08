@@ -1,16 +1,7 @@
 var songArray = [];
 
-$.ajax({url: "data/songs.json"}).done(function(data) {
-    var ajaxData = data.songs;
-    addSongs(ajaxData);
-}).fail(function(error) {
-    console.log("Failed", error);
-}).always(function() {
-    console.log("Test");
-});
-
-$("#more").click(function() {
-    $.ajax({url: "data/songs2.json"}).done(function(data) {
+function getSongs(json) {
+    $.ajax({url: json}).done(function(data) {
         var ajaxData = data.songs;
         addSongs(ajaxData);
     }).fail(function(error) {
@@ -18,9 +9,7 @@ $("#more").click(function() {
     }).always(function() {
         console.log("Test");
     });
-    // Disable button
-    $(this).prop("disabled", true);
-});
+}
 
 function addSongs(data) {
     data.map(function(song, index) {
@@ -30,3 +19,12 @@ function addSongs(data) {
         $(this).parent().remove();
     });
 }
+
+$("#more").click(function() {
+    getSongs("data/songs2.json");
+
+    // Disable button
+    $(this).prop("disabled", true);
+});
+
+getSongs("data/songs.json")
