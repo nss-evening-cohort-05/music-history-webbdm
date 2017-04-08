@@ -24,7 +24,7 @@ $("#more").click(function() {
 
 function addSongs(data) {
     data.map(function(song, index) {
-        $("#songs").append(`<li>${song.name} by ${song.artist} from the album ${song.album} <button class="delete">DELETE</button></li>`);
+        $("#songs").append(`<li><span class="songTitle">${song.name}</span><br> by ${song.artist} from the album ${song.album} <button class="delete">DELETE</button></li>`);
     });
     $(".delete").click(function() {
         $(this).parent().remove();

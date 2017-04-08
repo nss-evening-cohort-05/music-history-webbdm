@@ -15,30 +15,33 @@
     <div class="container">
         <div class="flex">
             <div class="nav">
+                <!--       <h4>MUSIC HISTORY</h4> -->
                 <ul>
-                    <li>View Music |</li>
-                    <li>Add Music |</li>
-                    <li>Profile</li>
+                    <li>VIEW MUSIC </li>
+                    <li>|</li>
+                    <li>ADD MUSIC </li>
+                    <li>|</li>
+                    <li>PROFILE</li>
                 </ul>
             </div>
             <div class="side">
                 <form>
                     <label for="length">Song Length</label>
                     <br>
-                    <input type="range" name="length">
+                    <input class="range" type="range" name="length">
                     <br>
                     <label for="artist">Artist</label>
                     <br>
-                    <select name="artist">
-                        <option></option>
-                    </select>
+                    <select name="artist" class="artist">
+                      <option></option>
+                  </select>
                     <br>
                     <br>
                     <label for="album">Album</label>
                     <br>
-                    <select name="album">
-                        <option></option>
-                    </select>
+                    <select name="album" class="album">
+                      <option></option>
+                  </select>
                     <br>
                     <br>
                     <label>Genre</label>
@@ -46,22 +49,22 @@
                     <br>
                     <div>
                         <label>
-                            <input type="checkbox" name="Rock" value="">Rock </label>
+                          <input type="checkbox" name="Rock" value="">Rock </label>
                         <label>
-                            <input type="checkbox" name="Pop" value="">Pop</label>
+                          <input type="checkbox" name="Pop" value="">Pop</label>
                         <br>
                         <label>
-                            <input type="checkbox" name="Blues" value="">Blues</label>
+                          <input type="checkbox" name="Blues" value="">Blues</label>
                         <label>
-                            <input type="checkbox" name="Classical" value="">Classical</label>
+                          <input type="checkbox" name="Classical" value="">Classical</label>
                         <br>
                         <label>
-                            <input type="checkbox" name="Jazz" value="">Jazz</label>
+                          <input type="checkbox" name="Jazz" value="">Jazz</label>
                         <label>
-                            <input type="checkbox" name="Hip Hop" value="">Hip Hop</label>
+                          <input type="checkbox" name="Hip Hop" value="">Hip Hop</label>
                         <br>
                     </div>
-                    <button class="filter">Filter</button>
+                    <button class="filter" disabled="true">Filter</button>
                 </form>
             </div>
             <div class="main">
@@ -69,7 +72,6 @@
                 <button id="more">More</button>
             </div>
         </div>
-    </div>
     </div>
     <script src="jquery-3.2.0.min.js"></script>
     <script src="songs.js"></script>

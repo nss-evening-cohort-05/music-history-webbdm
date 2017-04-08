@@ -1,44 +1,53 @@
-$background: #3D3333
-$nav: #355EB4
+$background: #0B2247
+$nav: #2B5388
 $labelfont: 'Russo One', sans-serif
+$neon: #FF3134
 
 *
- box-sizing: border-box
- color: white
+  box-sizing: border-box
+  color: white
 
 .container
-    height: 500px
-    width: 700px
+  height: 500px
+  width: 700px
 
 .flex
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
 
 .flex>div
-    text-align: center
-    padding: 10px
-    border: 2px solid black
+  text-align: center
+  padding: 10px
+  border: 2px solid black
 
 .flex>div:first-child
-    flex: 0 1 100%
-    background-color: $nav
-    height: 90px
-    margin-bottom: 11px
+  flex: 0 1 100%
+  background-color: $background
+  height: 90px
+  margin-bottom: 11px
+  padding: 0
 
 .side
-    background-color: $background
-    flex: 0 1 30%
-    margin-right: 14px
-    font-family: $labelfont
+  background: linear-gradient($background, $background 30%,#090D29)
+  // background-color: $background
+  flex: 0 1 30%
+  margin-right: 14px
+  font-family: $labelfont
 
 .side, .main
-    height: 400px
+  height: 400px
 
 .nav
-  ul
+  h4
+    font-size: 25px
     text-align: left
-    margin: 25px 0px 0px 0px
+    width: 60px
+    border: 1px solid black
+
+  ul
+    text-align: right
+    margin: 35px 10px 0px 0px
 
   li
     display: inline-block
@@ -46,40 +55,63 @@ $labelfont: 'Russo One', sans-serif
     text-align: left
     font-size: 13px
     font-family: $labelfont
+    margin: 0px 5px
 
 .main
-    background-color: $background
-    flex: 0 2 68%
+  background: linear-gradient($background, $background 30%,#090D29)
+  // background-color: $background
+  flex: 0 2 68%
+  overflow: auto
 
 .main
+  ul
+    margin: 0px 10px 0px 0px
+    padding-left: 0
+
   li
     font-size: 13px
     list-style-type: none
     margin: 7px 0px
+    padding: 5px
+    border-top: 1px solid $nav
+    color: white
+    font-family: helvetica
 
   ul, h3
     text-align: left
 
 .delete, .main button
-     background-color: #355EB4
-     border-radius: 5px
-     border: 0px solid
+  background-color: $neon
+  border-radius: 5px
+  border: 0px solid
+  font-family: $labelfont
+
+.delete
+  float: right
+  margin-bottom: 20px
 
 form
-    text-align: left
+  text-align: left
 
 input[type='range']
-    width: 150px
+  width: 150px
+  background-color: $neon
+
+.artist, .album
+  background-color: $nav
+  border-color: $nav
 
 select
-    width: 150px
+  width: 150px
 
 .checkboxes
-    text-align: left
+  text-align: left
 
 .filter
-    border: 1px solid black
-    border-radius: 4px
-    margin: 30px 0px 0px 45px
-    height: 30px
-    width: 80px
+  border: 1px solid black
+  border-radius: 4px
+  margin: 30px 0px 0px 45px
+  height: 30px
+  width: 80px
+  background-color: $neon
+  font-family: $labelfont
